@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fueltech Simulador</title>
+    
+    
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+</head>
+<body>
+  
+    <div class="fueltech-submenu">
+        <div class="container">
+            <div class="menu-superior">
+                <h6 class="proxima-pagina"><</h6>
+                <h6 class="submenu-head">Mapa Injeção</h6>
+                <h6 class="pagina-anterior">></h6>
+            </div>
+            <div class="injecao-tabela">
+                <div class="canvas"> 
+                    <canvas width:600px height:300px></canvas>
+                </div>
+                <div class="controles-inferior">
+                    <div class="controles-laterais esquerda">
+                        <button onclick=retornarItem() id="itemAnterior"><</button>   
+                    </div>
+                    <div class="controles">
+                        <div class="controles-valores">
+                            <button id="diminuiValor"class="valor-negativo" onclick=diminuirValor()>-</button>
+                            <h6 id="valorAtual" class="valor-inserido">10%</h6>
+                            <button id="acrescentaValor"onclick=acrescentaValor() class="valor-positivo">+</button>                        
+                        </div>
+                        <h6 class="valor-atual" id="valorSelecionado">10%</h6>
+                    </div>
+                    <div class="controles-laterais direita">
+                        <button onclick=proximoItem() id="itemSeguinte">></button>   
+                    </div>
+                </div>
+            </div>
+            <div class="menu-inferior">
+                <a href="../index.html"class="cancelar">Cancelar</a>
+                <a class="retornar">Retornar Dashboard</a>
+                <a class="confirma">Confirma</a>
+            </div>
+        </div>
+    </div>
+    <script src="../Js/index.js"></script>
+</body>
+</html>

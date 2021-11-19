@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --cor-injecao: #6699ff;
+  --cor-texto: white;
+  --cor-fundo: #7e848e;
+  --cor-fundo-botao: #a2a2a4;
+  --cor-preto: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  width: 600px;
+  height: 300px;
+}
+.fueltech .container {
+  display: flex;
+}
+.menu-esquerda,
+.menu-meio,
+.menu-direita {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+.item-grande {
+  width: 180px;
+  height: 180px;
+  background: black;
+  color: white;
+  flex-wrap: wrap;
+}
+.item-medio {
+  width: 180px;
+  height: 80px;
+  background: green;
+  color: white;
+}
+.item-normal {
+  width: 85px;
+  height: 80px;
+  background: blue;
+  color: white;
+  margin-right: 5px;
+}
+.menu-esquerda .item-normal:nth-child(3) {
+  margin: 0;
+  width: 90px;
+}
+.menu-direita .item-normal:nth-child(2),
+.menu-direita .item-normal:nth-child(5) {
+  margin: 0;
+  width: 90px;
+}
+
+/* FUELTECH SUBMENUS */
+.fueltech-submenu .menu-superior {
+  display: flex;
+  justify-content: space-between;
+  background: var(--cor-injecao);
+  height: 50px;
+  align-items: center;
+}
+.submenu-head {
+  font-size: 25px;
+  color: var(--cor-texto);
+}
+
+.proxima-pagina,
+.pagina-anterior {
+  font-size: 30px;
+}
+.fueltech-submenu .container {
+  height: 260px;
+}
+.fueltech-submenu .main {
+  display: flex;
+  flex-direction: column;
+  background: grey;
+  border-top: 2px solid black;
+  overflow: scroll;
+  height: 300px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.submenus {
+  border: 2px solid black;
+  height: 30px;
+  font-size: 23px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.submenus:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+.fueltech-submenu .menu-inferior {
+  display: flex;
+  justify-content: space-between;
+  background: var(--cor-preto);
+}
+
+.menu-inferior .cancelar {
+  background: red;
+  width: 200px;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+}
+.menu-inferior .retornar {
+  background: transparent;
+  color: white;
+  text-decoration: none;
+}
+.menu-inferior .confirma {
+  background: green;
+  width: 200px;
+  color: white;
+  text-decoration: none;
+}
+.cancelar:hover,
+.retornar:hover,
+.confirma:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* FUELTECH TABELA INJECAO */
+.canvas {
+  background: black;
+}
+.injecao-tabela .controles-inferior {
+  display: flex;
+  justify-content: space-between;
+  background: var(--cor-fundo);
+  height: 100px;
+}
+.controles-inferior button {
+  background: transparent;
+  border: 2px solid black;
+}
+.controles-laterais {
+  width: 50px;
+}
+.direita button {
+  border-right: none;
+}
+.esquerda button {
+  border-left: none;
+}
+.controles-laterais button {
+  width: 50px;
+  height: 90px;
+  padding: 10px;
+  margin-top: 5px;
+  background: var(--cor-fundo-botao);
+  font-size: 25px;
+}
+.controles {
+  width: 450px;
+  display: inline;
+  border: 2px solid red;
+  padding: 10px;
+  margin: 5px;
+  display: inline;
+  text-align: center;
+  font-size: 30px;
+}
+.controles-valores {
+  height: 100px;
+  padding: 5px 0;
+}
+.valor-atual {
+  position: relative;
+  display: inline-block;
+  bottom: 135px;
+  margin: 0;
+  width: 100px;
+  background: var(--cor-fundo);
+}
+.valor-inserido {
+  margin: 0;
+  display: inline-block;
+  font-size: 25px;
+  width: 100px;
+}
+.valor-positivo,
+.valor-negativo {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+}
