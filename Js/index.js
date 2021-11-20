@@ -2,38 +2,52 @@ const valorAtual =document.getElementById("valorAtual");
 const valorExibido = document.getElementById("valorSelecionado");
 const itemAnterior = document.getElementById("itemAnterior");
 const itemAtual = document.getElementById("valorSelecionado")
-let valorSelecionado = 10;
-let itemSelecionado = [10,20,30,40,50,60,70,80,90,100];
+let valorSelecionado = [0,10,15,25,35,40,55,60,70,86,100];
+let itemSelecionado = [0,10,20,30,40,50,60,70,80,90,100];
+
 let indiceArray = 0
-function acrescentaValor(){
-    console.log(valorAtual)
-    valorSelecionado++
-    if(valorSelecionado >= 100){
-        valorSelecionado = 100;
+function iniciarNumero(){
+    valorAtual.innerHTML = `${valorSelecionado[indiceArray]}%`;
+    itemSelecionado.innerHTML = `${itemSelecionado[indiceArray]}&`;
+}
+function acrescentaValor(){ 
+    let valor = valorSelecionado[indiceArray];
+    valor++
+    valorSelecionado[indiceArray] = valor;
+    if(valorSelecionado[indiceArray] >= 100){
+        valorSelecionado[indiceArray] = 100;
     }
-    valorAtual.innerHTML = `${valorSelecionado}%`;
+    valorAtual.innerHTML = `${valorSelecionado[indiceArray]}%`;
+    console.log(valorSelecionado)
 }
 function diminuirValor(){
-    console.log(valorAtual)
-    valorSelecionado--
-    if(valorSelecionado <= 0){
-        valorSelecionado = 0;
+    let valor = valorSelecionado[indiceArray];
+    valor--
+    valorSelecionado[indiceArray] = valor;
+    if(valorSelecionado[indiceArray] <= 0){
+        valorSelecionado[indiceArray] = 0;
     }
-    valorAtual.innerHTML= `${valorSelecionado} %`;
+    valorAtual.innerHTML= `${valorSelecionado[indiceArray]}%`;
+    console.log(valorSelecionado[indiceArray])
 }
 function retornarItem(){
-    console.log(itemAtual);
+    //console.log(itemAtual);
     indiceArray--
     if(indiceArray<= 0){
         indiceArray = 0;
     }
     itemAtual.innerHTML = `${itemSelecionado[indiceArray]}%`
+    valorAtual.innerHTML = `${valorSelecionado[indiceArray]}%`
+
+   
+    
 }
 function proximoItem(){
     indiceArray++
     if(indiceArray >=10){
-        indiceArray = 9;
+        indiceArray = itemSelecionado.length - 1;
     }
-    itemAtual.innerHTML = `${itemSelecionado[indiceArray]} %`;
+    itemAtual.innerHTML = `${itemSelecionado[indiceArray]}%`;
+    valorAtual.innerHTML = `${valorSelecionado[indiceArray]}%`
 }
-console.log(itemSelecionado.length)
+iniciarNumero()
