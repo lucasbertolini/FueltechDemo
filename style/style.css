@@ -17,6 +17,7 @@ body {
 }
 .fueltech .container {
   display: flex;
+  height: 250px;
 }
 .menu-esquerda,
 .menu-meio,
@@ -27,7 +28,7 @@ body {
 }
 .item-grande {
   width: 180px;
-  height: 180px;
+  height: 165px;
   background: black;
   color: white;
   flex-wrap: wrap;
@@ -130,7 +131,7 @@ body {
 }
 
 /* FUELTECH TABELA INJECAO */
-.canvas {
+canvas {
   background: black;
 }
 .injecao-tabela .controles-inferior {
@@ -193,4 +194,32 @@ body {
   height: 50px;
   width: 50px;
   font-size: 25px;
+}
+/*AJUSTE RÁPIDO*/
+.injecao-rapida {
+  text-align: center;
+}
+
+.ajuste {
+  display: flex;
+}
+.caixa-valores span {
+  display: inline-block;
+  width: 200px;
+}
+.caixa-valores {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: black;
+  color: white;
+  justify-content: center;
+}
+
+.caixa-valores button {
+  width: 100px;
+  height: 40px;
+  margin-left: 20px;
 }
