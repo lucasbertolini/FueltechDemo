@@ -5,6 +5,7 @@
   --cor-fundo: #7e848e;
   --cor-fundo-botao: #a2a2a4;
   --cor-preto: black;
+  --cor-fundo-cinza: #4a4a4a;
 }
 body {
   margin: 0;
@@ -198,28 +199,58 @@ canvas {
 /*AJUSTE RÁPIDO*/
 .injecao-rapida {
   text-align: center;
+  background: var(--cor-fundo-cinza);
+  color: white;
 }
 
 .ajuste {
   display: flex;
+  justify-content: space-between;
 }
 .caixa-valores span {
-  display: inline-block;
   width: 200px;
 }
+
 .caixa-valores {
-  width: 200px;
+  width: 50%;
   height: 200px;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   padding: 10px;
-  background: black;
+  background: var(--cor-fundo-cinza);
   color: white;
-  justify-content: center;
+  padding-left: 40px;
+}
+
+.caixa-valores h6 {
+  display: inline;
+  box-sizing: border-box;
+  border: 2px solid var(--cor-preto);
+  height: 90px;
+  width: 90px;
+  margin: 0;
+  align-content: center;
+  padding-top: 30px;
+  font-size: 20px;
 }
 
 .caixa-valores button {
   width: 100px;
-  height: 40px;
-  margin-left: 20px;
+  height: 45px;
+}
+.linha-central {
+  margin-top: 30px;
+  width: 5px;
+  height: 230px;
+  background: var(--cor-preto);
+}
+.botoes-ajuste-rapido {
+  width: 100px;
+}
+.botoes-ajuste-rapido button {
+  background-color: var(--cor-fundo-botao);
+  border: none;
+  border-bottom: 1px solid black;
+
+  font-weight: bold;
 }

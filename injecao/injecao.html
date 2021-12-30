@@ -21,32 +21,33 @@
             </div>
             <div class="injecao-tabela">
                 <div class="canvas"> 
-                    <canvas width="600" height="180px"></canvas>
+                    <canvas id="canvas" width="600" height="180px"></canvas>
                 </div>
                 <div class="controles-inferior">
                     <div class="controles-laterais esquerda">
-                        <button onclick=retornarItem() id="itemAnterior"><</button>   
+                        <button id="itemAnterior"><</button>   
                     </div>
                     <div class="controles">
                         <div class="controles-valores">
-                            <button id="diminuiValor"class="valor-negativo" onclick=diminuirValor()>-</button>
+                            <button id="diminuiValor"class="valor-negativo" >-</button>
                             <h6 id="valorAtual" class="valor-inserido"></h6>
-                            <button id="acrescentaValor"onclick=acrescentaValor() class="valor-positivo">+</button>                        
+                            <button id="acrescentaValor" class="valor-positivo">+</button>                        
                         </div>
-                        <h6 class="valor-atual" id="valorSelecionado">-0.6 Bar</h6>
+                        <h6 class="valor-atual" id="valorSelecionado"></h6>
                     </div>
                     <div class="controles-laterais direita">
-                        <button onclick=proximoItem() id="itemSeguinte">></button>   
+                        <button id="itemSeguinte">></button>   
                     </div>
                 </div>
             </div>
             <div class="menu-inferior">
-                <a href="../index.html"class="cancelar">Cancelar</a>
-                <a class="retornar">Retornar Dashboard</a>
+                <a href="./injecaoSubMenu.html"class="cancelar">Cancelar</a>
+                <a href="../index.html"class="retornar">Retornar Dashboard</a>
                 <a class="confirma">Confirma</a>
             </div>
         </div>
     </div>
-    <script src="../Js/index.js"></script>
+    <script type="module" src="../Js/index.js"></script>
+    
 </body>
 </html>
