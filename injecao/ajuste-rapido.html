@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-  
+
     <div class="fueltech-submenu">
         <div class="container">
             <div class="menu-superior">
-                <h6 class="proxima-pagina"><</h6>
+                <h6 class="proxima-pagina">&#5176;</h6>
                 <h6 class="submenu-head">Mapa Injeção</h6>
-                <h6 class="pagina-anterior">></h6>
+                <h6 class="pagina-anterior">&#5171;</h6>
             </div>
             <div class="injecao-rapida">
                 <span>Mapa principal de injeção</span>
@@ -25,18 +25,18 @@
                             <h6 id="valorIncrementoA"></h6>
                             <div class="botoes-ajuste-rapido">
 
-                                <button>^</button>
-                                <button>baixo</button>
+                                <button id="incrementar-A">&#708;</button>
+                                <button id="decrementar-A">&#709;</button>
                             </div>
                         </div>
                         <div class="linha-central"></div>
                         <div class="caixa-valores">
                             <span>todo mapa B:</span>
-                            <h6 id="valorIncrementoB">6 %</h6>
+                            <h6 id="valorIncrementoB"></h6>
                             <div class="botoes-ajuste-rapido">
 
-                                <button>^</button>
-                                <button>baixo</button>
+                                <button id="incrementar-B">&#708;</button>
+                                <button id="decrementar-B">&#709;</button>
                             </div>
                         </div>
                     </div>
@@ -47,11 +47,13 @@
             </div>
             <div class="menu-inferior">
                 <a href="../index.html"class="cancelar">Cancelar</a>
-                <a class="retornar">Retornar Dashboard</a>
+                <a href="injecaoSubMenu.html"class="retornar">Retornar Dashboard</a>
                 <a class="confirma">Confirma</a>
             </div>
         </div>
     </div>
-    <script type="module" src="../Js/index.js"></script>
+    
+    <script src="../js/ajusteRapido.js"></script>
+    <h6 id="Ajuste-rapido"></h6>
 </body>
 </html>
